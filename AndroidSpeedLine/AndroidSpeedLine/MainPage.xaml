@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AndroidSpeedLine.MainPage">
+    <ScrollView>
+
+
+    <StackLayout BackgroundColor="#F5F2C8"
+                 Margin="6">
+        <!-- Place new controls here -->
+        <Label Text="FChilio Developer"
+               HorizontalOptions="End"  />
+        <Grid BackgroundColor="#F5F2C8">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Text="Time Line" 
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   Grid.Row="0" Grid.Column="1"
+                   FontSize="Large"
+                   TextColor="DarkGoldenrod"
+                   FontAttributes="Bold"/>
+            <Label Text="Time Start"
+                   VerticalOptions = "CenterAndExpand" 
+                   Grid.Row="1" 
+                   Grid.Column="0"
+                   TextColor="Black"/>
+            <TimePicker x:Name="TimeNow"
+                   BackgroundColor="#D2F0F0" 
+                   Grid.Row="1" 
+                   Grid.Column="1" Time="12:00:00"/>
+            <Label Text="Last Up"
+                   VerticalOptions = "CenterAndExpand"
+                   Grid.Row="2" 
+                   Grid.Column="0"
+                   TextColor="Black"/>
+            <Switch x:Name="TimeSelect" 
+                    IsToggled="true"
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    VerticalOptions="End"
+                    Toggled="OnToggled"/>
+            <Label x:Name="LabelTimeSelect"
+                   Text="Time Now"
+                   Grid.Row="1"
+                   Grid.Column="2"
+                   TextColor="Red"
+                   FontAttributes="Bold"
+                   VerticalOptions="Start"/>
+            <TimePicker x:Name="TimeLastOne" 
+                   BackgroundColor="#D2F0F0" 
+                   Grid.Row="2" 
+                   Grid.Column="1" Time="12:00:00"/>
+            <Label Text="How Many For Time?"
+                   VerticalOptions = "CenterAndExpand"
+                   Grid.Row="3" 
+                   Grid.Column="0"
+                   TextColor="Black"/>
+            <Entry x:Name="HowManyForTime"
+                   MaxLength="1"
+                   BackgroundColor="#D2F0F0" 
+                   Grid.Row="3" 
+                   Grid.Column="1"
+                   Text="4"
+                   Keyboard="Numeric"/>
+            <Label Text="Speed of Line?"
+                   VerticalOptions = "CenterAndExpand"
+                   Grid.Row="4" 
+                   Grid.Column="0"
+                   TextColor="Black"/>
+            <Entry x:Name="LineSpeed"
+                   Text="165"
+                   MaxLength="3"
+                   BackgroundColor="#D2F0F0" 
+                   Grid.Row="4" 
+                   Grid.Column="1"
+                   Keyboard="Numeric"/>
+            <Label Text="seconds"
+                   VerticalOptions="End"
+                   Grid.Row="4"
+                   Grid.Column="2"/>
+            <Label Text="Time Line Work"
+                   VerticalOptions = "CenterAndExpand"
+                   Grid.Row="5" 
+                   Grid.Column="0"
+                   TextColor="Black"/>
+            <Entry x:Name="TimeLineWork"
+                   Text="12"
+                   MaxLength="4"
+                   BackgroundColor="#D2F0F0" 
+                   Grid.Row="5" 
+                   Grid.Column="1"
+                   Keyboard="Numeric"/>
+            <Label Text="seconds"
+                   VerticalOptions="End"
+                   Grid.Row="5"
+                   Grid.Column="2"/>
+            <Button Text= "Enter"
+                    FontAttributes="Bold"
+                    BorderColor="#F5DE0B"
+                    BorderWidth="1"
+                    Grid.Row="6"
+                    Grid.Column="1"
+                    BackgroundColor="#C6EE94"
+                    Clicked="Button_Clicked"/>
+            <!--<Label Text="You Need this Total" 
+                   Grid.Row="7" 
+                   Grid.Column="0"
+                   VerticalOptions = "CenterAndExpand"/>
+            <Entry x:Name="labelAnsware" 
+                   Grid.Row="7" 
+                   Grid.Column="1" 
+                   MaxLength="8" 
+                   VerticalOptions = "CenterAndExpand"/>-->
+            <Label Text="Last Up" 
+                   Grid.Row="8" 
+                   Grid.Column="0"
+                   VerticalOptions = "CenterAndExpand"
+                   TextColor="Black"/>
+            <TimePicker x:Name="TimeFinalLess"
+                   BackgroundColor="#D2F0F0" 
+                   Grid.Row="8" 
+                   Grid.Column="1" 
+                   Time="12:00:00"
+                   IsVisible="false"
+                   Format="hh:mm:ss tt" 
+                   FontAttributes="Bold" 
+                   VerticalOptions="FillAndExpand"/>
+
+            <TimePicker x:Name="TimeFinalMore"
+                   BackgroundColor="#D2F0F0" 
+                   Grid.Row="8" 
+                   Grid.Column="2" 
+                   Time="12:00:00"
+                   IsVisible="false"
+                   Format="hh:mm:ss tt"
+                   FontAttributes="Bold"
+                   VerticalOptions="FillAndExpand"/>
+            <Label Text="You Need this Total" 
+                   Grid.Row="9" 
+                   Grid.Column="0"
+                   VerticalOptions = "CenterAndExpand"
+                   TextColor="Black"/>
+            <Label x:Name="LabelQtMoreLess"
+                   BackgroundColor="#D2F0F0" 
+                   Grid.Row="9" 
+                   Grid.Column="1"
+                   FontAttributes="Bold"
+                   FontSize="Large"
+                   HorizontalOptions="FillAndExpand"
+                   TextColor="Black"/>
+            <Label x:Name="LabelQtMoreMore"
+                   BackgroundColor="#D2F0F0" 
+                   Grid.Row="9" 
+                   Grid.Column="2"
+                   FontAttributes="Bold"
+                   FontSize="Large"
+                   HorizontalOptions="FillAndExpand"
+                   TextColor="Black"/>
+        </Grid>
+
+    </StackLayout>
+    </ScrollView>
+</ContentPage>
