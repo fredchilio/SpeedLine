@@ -10,7 +10,7 @@
 
     <StackLayout BackgroundColor="#F5F2C8"
                  Margin="6">
-        <!-- Place new controls here -->
+        <!-- Place new controls here... -->
         <Label Text="FChilio Developer"
                HorizontalOptions="End"  />
         <Grid BackgroundColor="#F5F2C8">
